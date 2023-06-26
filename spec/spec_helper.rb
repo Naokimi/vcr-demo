@@ -98,5 +98,9 @@ RSpec.configure do |config|
     konfig.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
     konfig.hook_into :webmock
     konfig.configure_rspec_metadata!
+
+    konfig.filter_sensitive_data('<USER_AGENT>') do |interaction|
+      interaction.request.headers['User-Agent']&.first
+    end
   end
 end
