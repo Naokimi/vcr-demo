@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Pokemon, type: :model do
+RSpec.describe Pokemon, type: :model, vcr: true do
   describe '#create' do
     subject { described_class.create(name:) }
 
