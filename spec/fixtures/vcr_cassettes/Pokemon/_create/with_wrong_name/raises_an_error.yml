@@ -21,7 +21,7 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Mon, 26 Jun 2023 00:53:46 GMT
+      - Mon, 26 Jun 2023 00:56:10 GMT
       Content-Type:
       - text/plain; charset=utf-8
       Content-Length:
@@ -55,17 +55,17 @@ http_interactions:
       Cf-Cache-Status:
       - HIT
       Age:
-      - '2037'
+      - '2181'
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=nlu6FsyGdYLL5L0UI%2Fpwh8%2B0d%2F8mK2eCD%2B%2BA9OqUDKDsmRBgpdJzdWkRtrAhr%2FNrf6CfSWYN0QyOq%2BMsaOhv8IRGkk0J%2Fd37R1iQ2e0cHvCyEIYmDHmO9vShUWac"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=jWkmNZEXY16i%2BJOSRVIbi0aUo3EiERTgyTThsfhPTF5XMlUYFF4LtUhy7PgjVhn6aHAPE5rusMYoU5R2iWgmivOI2EvJZoqEuKlrb9k7kwfIOGuh4MH0a2j7%2FRUa"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Cf-Ray:
-      - 7dd179a3bc81e39f-NRT
+      - 7dd17d29884b80d5-NRT
     body:
       encoding: UTF-8
       string: Not Found
-  recorded_at: Mon, 26 Jun 2023 00:53:46 GMT
+  recorded_at: Mon, 26 Jun 2023 00:56:10 GMT
 recorded_with: VCR 6.1.0

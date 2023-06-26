@@ -102,5 +102,9 @@ RSpec.configure do |config|
     konfig.filter_sensitive_data('<USER_AGENT>') do |interaction|
       interaction.request.headers['User-Agent']&.first
     end
+
+    konfig.filter_sensitive_data('<WEIGHT>') do |interaction|
+      JSON.parse(interaction.response.body)['weight']
+    end
   end
 end
