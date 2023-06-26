@@ -13,6 +13,8 @@
 # it.
 #
 # See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+require 'vcr'
+
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
@@ -91,4 +93,10 @@ RSpec.configure do |config|
   # as the one that triggered the failure.
   Kernel.srand config.seed
 =end
+
+  VCR.configure do |konfig|
+    konfig.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
+    konfig.hook_into :webmock
+    konfig.configure_rspec_metadata!
+  end
 end
