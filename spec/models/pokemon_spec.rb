@@ -16,12 +16,6 @@ RSpec.describe Pokemon, type: :model do
     context 'with wrong name' do
       let(:name) { 'Doraemon' }
 
-      before do
-        allow(PokeApi).to receive(:get).and_raise(
-          StandardError.new("Please provide a valid Pokemon name (name provided: '#{name}')")
-        )
-      end
-
       it 'raises an error' do
         expect { subject }.to raise_error(
           StandardError, "Please provide a valid Pokemon name (name provided: '#{name}')"
@@ -32,19 +26,6 @@ RSpec.describe Pokemon, type: :model do
 
     context 'with correct name' do
       let(:name) { 'Gyarados' }
-      let(:pokemon_params) do
-        {
-          name: 'gyarados',
-          id: 130,
-          height: 65,
-          order: 211,
-          weight: 2350
-        }
-      end
-
-      before do
-        allow(PokeApi).to receive(:get).and_return(pokemon_params)
-      end
 
       it 'creates a Pokemon' do
         subject
